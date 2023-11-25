@@ -36,7 +36,7 @@ exports.readStudentData = async (req,res)=>{
 exports.updateStudentData = async (req,res) =>{
     try{
         let reqBody = req.body;
-        let id = req.params.id
+        let id = req.params.id;
         let query = {
             _id : id
         }
@@ -71,3 +71,51 @@ exports.deleteStudentData = async (req,res) =>{
         })
     }
 }
+
+exports.studentDataById = async (req,res)=>{
+    try {
+        let id = req.params.id
+        let query = {
+            _id : id
+        }
+        let result = await studentData.findOne(query)
+        res.status(200).json({
+            status : "success",
+            data : result
+        })
+    }catch (e){
+        res.status(500).json({
+            status : "fail",
+            error : e.toString()
+        })
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

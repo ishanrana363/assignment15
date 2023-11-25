@@ -1,6 +1,7 @@
 const express = require('express')
 const app = express()
 const route = require("./src/routes/api")
+
 // Security Middleware Import
 
 const rateLimit = require("express-rate-limit");
@@ -9,8 +10,7 @@ const mongoSanitize = require("express-mongo-sanitize");
 const hpp = require("hpp");
 const cors = require('cors');
 const morgan = require("morgan")
-const path = require("path");
-const mongoose = require("mongoose");
+
 
 
 
@@ -26,14 +26,13 @@ app.use(express.json())
 
 
 const limit = rateLimit({
-    windowMs: 15 * 60 * 1000, // 15 minutes in milliseconds
+    windowMs: 15 * 60 * 1000,
     max: 3000
 });
 
 
 app.use(limit)
 
-// Database Connection
 
 app.use("/api/v1",route)
 
