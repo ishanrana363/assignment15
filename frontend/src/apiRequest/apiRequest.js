@@ -25,7 +25,7 @@ export const dataReadRequest = async () => {
 
 export const dataUpdateRequest =  async  (id,postBody) => {
     try {
-        let res = await axios.post(" http://localhost:5000/api/v1/update/"+id,postBody);
+        let res = await axios.post("http://localhost:5000/api/v1/update/"+id,postBody);
         if (res.status === 200){
             return true
         }

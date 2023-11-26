@@ -10,7 +10,7 @@ const App = () => {
                 <AppNavbar/>
                 <Routes>
                     <Route path= "/" element={<DataListPage/>}/>
-                    <Route path= "/save" element={<SaveDataPage/>} />
+                    <Route path= "/save" element={<SaveDataPage/>}/>
                 </Routes>
             </BrowserRouter>
         </div>

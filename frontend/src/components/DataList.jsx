@@ -23,7 +23,7 @@ const DataList = () => {
     }
     if(data.length===0){
         return(
-            <div className="container">
+            <div className="container ">
                 <ThreeCircles
                     height="100"
                     width="100"

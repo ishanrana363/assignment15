@@ -171,9 +171,9 @@ const SaveData = () => {
                 </div>
                 {/*admissionDate*/}
                 <div className= "col-md-4 mt-4 " >
-                    <label className="form-label" htmlFor= "admissionDate" > Admission Data </label>
+                    <label className="form-label" htmlFor= "admissionDate" > Admission Date </label>
                     <input type= "text" className="form-control"
-                           id= "admissionDate" placeholder= "Admission Data"
+                           id= "admissionDate" placeholder= "Admission Date"
                            value={admissionDate} onChange={(e)=>{getValue("admissionDate",e.target.value)}}
                     />
                 </div>
